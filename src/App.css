@@ -52,6 +52,7 @@ main {
   margin: 0;
   line-height: 1.1;
   text-align: left;
+  text-shadow: 0 0 40px var(--accent-border);
 }
 
 .hero-title {
@@ -81,12 +82,40 @@ main {
   color: var(--text-h);
   text-decoration: none;
   font-size: 15px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .button.primary {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
+  animation: button-glow-pulse 3s ease-in-out infinite;
+}
+
+.button.primary:hover {
+  box-shadow: 0 0 28px 4px var(--accent-border);
+}
+
+@keyframes button-glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 12px 1px var(--accent-border);
+  }
+  50% {
+    box-shadow: 0 0 22px 4px var(--accent-border);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button.primary {
+    animation: none;
+    box-shadow: 0 0 16px 2px var(--accent-border);
+  }
+}
+
+.button:not(.primary):hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 16px var(--accent-bg);
 }
 
 .section {
@@ -122,6 +151,12 @@ main {
   padding: 16px 20px;
   border: 1px solid var(--border);
   border-radius: 10px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-item:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 24px var(--accent-bg);
 }
 
 .timeline-heading {
@@ -174,6 +209,12 @@ main {
   padding: 16px 20px;
   border: 1px solid var(--border);
   border-radius: 10px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.education-item:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 24px var(--accent-bg);
 }
 
 .education-detail {
@@ -207,6 +248,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 28px var(--accent-bg);
 }
 
 .project-card h3 {
@@ -237,6 +284,11 @@ main {
   border-radius: 999px;
   padding: 4px 12px;
   font-size: 13px;
+  transition: box-shadow 0.2s ease;
+}
+
+.tag:hover {
+  box-shadow: 0 0 12px var(--accent-border);
 }
 
 .project-link {
