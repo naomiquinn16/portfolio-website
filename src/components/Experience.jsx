@@ -9,8 +9,15 @@ export default function Experience({ experience }) {
               <h3>{job.role}</h3>
               <span className="timeline-period">{job.period}</span>
             </div>
-            <p className="timeline-company">{job.company}</p>
-            <p className="timeline-description">{job.description}</p>
+            <p className="timeline-company">
+              {job.company}
+              {job.location ? ` · ${job.location}` : ''}
+            </p>
+            <ul className="bullet-list">
+              {job.bullets.map((bullet, i) => (
+                <li key={i}>{bullet}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ol>
