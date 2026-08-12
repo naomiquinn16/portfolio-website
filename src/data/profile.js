@@ -99,7 +99,7 @@ export const profile = {
     { category: 'Frontend', items: ['Next.js', 'React', 'Vue', 'Angular'] },
     { category: 'Databases & Frameworks', items: ['SQL (Supabase/PostgreSQL)', 'MongoDB', 'Django', 'Node.js'] },
     { category: 'Cloud', items: ['AWS (full suite)', 'Google Cloud Platform'] },
-    { category: 'AI & Integrations', items: ['AWS Bedrock', 'LLM integration', 'agent-based systems', 'OCR', 'web scraping', 'Open Banking APIs'] },
+    { category: 'AI & Integrations', items: ['AWS Bedrock', 'LLM integration', 'agent-based systems', 'LangGraph', 'Langfuse', 'OCR', 'web scraping', 'Open Banking APIs'] },
   ],
   certifications: ['AWS Certified Cloud Practitioner (2021)'],
 }
